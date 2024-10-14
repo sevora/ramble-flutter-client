@@ -1,9 +1,9 @@
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 
-class FFButtonOptions {
-  const FFButtonOptions({
+class ButtonOptions {
+  const ButtonOptions({
     this.textAlign,
     this.textStyle,
     this.elevation,
@@ -48,8 +48,8 @@ class FFButtonOptions {
   final double? hoverElevation;
 }
 
-class FFButtonWidget extends StatefulWidget {
-  const FFButtonWidget({
+class ButtonWidget extends StatefulWidget {
+  const ButtonWidget({
     super.key,
     required this.text,
     required this.onPressed,
@@ -63,14 +63,14 @@ class FFButtonWidget extends StatefulWidget {
   final Widget? icon;
   final IconData? iconData;
   final Function()? onPressed;
-  final FFButtonOptions options;
+  final ButtonOptions options;
   final bool showLoadingIndicator;
 
   @override
-  State<FFButtonWidget> createState() => _FFButtonWidgetState();
+  State<ButtonWidget> createState() => _ButtonWidgetState();
 }
 
-class _FFButtonWidgetState extends State<FFButtonWidget> {
+class _ButtonWidgetState extends State<ButtonWidget> {
   bool loading = false;
 
   int get maxLines => widget.options.maxLines ?? 1;
@@ -124,9 +124,9 @@ class _FFButtonWidgetState extends State<FFButtonWidget> {
         : null;
 
     ButtonStyle style = ButtonStyle(
-      shape: WidgetStateProperty.resolveWith<OutlinedBorder>(
+      shape: MaterialStateProperty.resolveWith<OutlinedBorder>(
         (states) {
-          if (states.contains(WidgetState.hovered) &&
+          if (states.contains(MaterialState.hovered) &&
               widget.options.hoverBorderSide != null) {
             return RoundedRectangleBorder(
               borderRadius:
@@ -141,43 +141,43 @@ class _FFButtonWidgetState extends State<FFButtonWidget> {
           );
         },
       ),
-      foregroundColor: WidgetStateProperty.resolveWith<Color?>(
+      foregroundColor: MaterialStateProperty.resolveWith<Color?>(
         (states) {
-          if (states.contains(WidgetState.disabled) &&
+          if (states.contains(MaterialState.disabled) &&
               widget.options.disabledTextColor != null) {
             return widget.options.disabledTextColor;
           }
-          if (states.contains(WidgetState.hovered) &&
+          if (states.contains(MaterialState.hovered) &&
               widget.options.hoverTextColor != null) {
             return widget.options.hoverTextColor;
           }
           return widget.options.textStyle?.color ?? Colors.white;
         },
       ),
-      backgroundColor: WidgetStateProperty.resolveWith<Color?>(
+      backgroundColor: MaterialStateProperty.resolveWith<Color?>(
         (states) {
-          if (states.contains(WidgetState.disabled) &&
+          if (states.contains(MaterialState.disabled) &&
               widget.options.disabledColor != null) {
             return widget.options.disabledColor;
           }
-          if (states.contains(WidgetState.hovered) &&
+          if (states.contains(MaterialState.hovered) &&
               widget.options.hoverColor != null) {
             return widget.options.hoverColor;
           }
           return widget.options.color;
         },
       ),
-      overlayColor: WidgetStateProperty.resolveWith<Color?>((states) {
-        if (states.contains(WidgetState.pressed)) {
+      overlayColor: MaterialStateProperty.resolveWith<Color?>((states) {
+        if (states.contains(MaterialState.pressed)) {
           return widget.options.splashColor;
         }
         return widget.options.hoverColor == null ? null : Colors.transparent;
       }),
-      padding: WidgetStateProperty.all(widget.options.padding ??
+      padding: MaterialStateProperty.all(widget.options.padding ??
           const EdgeInsets.symmetric(horizontal: 12.0, vertical: 4.0)),
-      elevation: WidgetStateProperty.resolveWith<double?>(
+      elevation: MaterialStateProperty.resolveWith<double?>(
         (states) {
-          if (states.contains(WidgetState.hovered) &&
+          if (states.contains(MaterialState.hovered) &&
               widget.options.hoverElevation != null) {
             return widget.options.hoverElevation!;
           }
@@ -268,14 +268,10 @@ extension _WithoutColorExtension on TextStyle {
         debugLabel: debugLabel,
         fontFamily: fontFamily,
         fontFamilyFallback: fontFamilyFallback,
-        // The _package field is private so unfortunately we can't set it here,
-        // but it's almost always unset anyway.
-        // package: _package,
         overflow: overflow,
       );
 }
 
-// Slightly hacky method of getting the layout width of the provided text.
 double? _getTextWidth(String? text, TextStyle? style, int maxLines) =>
     text != null
         ? (TextPainter(

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class FlutterFlowIconButton extends StatefulWidget {
-  const FlutterFlowIconButton({
+class IconButtonWidget extends StatefulWidget {
+  const IconButtonWidget({
     Key? key,
     required this.icon,
     this.borderColor,
@@ -32,10 +32,10 @@ class FlutterFlowIconButton extends StatefulWidget {
   final Function()? onPressed;
 
   @override
-  State<FlutterFlowIconButton> createState() => _FlutterFlowIconButtonState();
+  State<IconButtonWidget> createState() => _IconButtonWidgetState();
 }
 
-class _FlutterFlowIconButtonState extends State<FlutterFlowIconButton> {
+class _IconButtonWidgetState extends State<IconButtonWidget> {
   bool loading = false;
   late double? iconSize;
   late Color? iconColor;
@@ -48,7 +48,7 @@ class _FlutterFlowIconButtonState extends State<FlutterFlowIconButton> {
   }
 
   @override
-  void didUpdateWidget(FlutterFlowIconButton oldWidget) {
+  void didUpdateWidget(IconButtonWidget oldWidget) {
     super.didUpdateWidget(oldWidget);
     _updateIcon();
   }

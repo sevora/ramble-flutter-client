@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.ralphlouisgopez" "\0"
-            VALUE "FileDescription", "ramble_flutter_client" "\0"
+            VALUE "CompanyName", "com.example" "\0"
+            VALUE "FileDescription", "ramble_front_end" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "ramble_flutter_client" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2024 com.ralphlouisgopez. All rights reserved." "\0"
-            VALUE "OriginalFilename", "ramble_flutter_client.exe" "\0"
-            VALUE "ProductName", "ramble_flutter_client" "\0"
+            VALUE "InternalName", "ramble_front_end" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
+            VALUE "OriginalFilename", "ramble_front_end.exe" "\0"
+            VALUE "ProductName", "ramble_front_end" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

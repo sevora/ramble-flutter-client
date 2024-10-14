@@ -1,6 +1,6 @@
 {
-    "name": "ramble_flutter_client",
-    "short_name": "ramble_flutter_client",
+    "name": "ramble_front_end",
+    "short_name": "ramble_front_end",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

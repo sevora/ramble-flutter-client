@@ -1,10 +1,14 @@
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../../themes/light_mode_theme.dart';
+import '../../themes/typography_theme.dart';
+import '../../utilities/utilities.dart';
+import '../../views/reusable/button.dart';
+import '../../views/reusable/ramble_icon_button.dart';
+
+import '../pages/view_post_widget.dart';
 
 class PostWidget extends StatelessWidget {
   const PostWidget({
@@ -43,7 +47,7 @@ class PostWidget extends StatelessWidget {
     return Container(
       width: MediaQuery.sizeOf(context).width * 1.0,
       decoration: BoxDecoration(
-        color: FlutterFlowTheme.of(context).secondaryBackground,
+        color: LightModeTheme().secondaryBackground,
         boxShadow: const [
           BoxShadow(
             blurRadius: 4.0,
@@ -97,27 +101,23 @@ class PostWidget extends StatelessWidget {
                             children: [
                               Text(
                                 displayName,
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
-                                  fontFamily: 'Outfit',
-                                  fontSize: 15.0,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
+                                style: TypographyTheme().bodyMedium.override(
+                                      fontFamily: 'Outfit',
+                                      fontSize: 15.0,
+                                      letterSpacing: 0.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                               ),
                               Text(
                                 valueOrDefault<String>(
                                   userName,
                                   '@unknown',
                                 ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
-                                  fontFamily: 'Outfit',
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.normal,
-                                ),
+                                style: TypographyTheme().bodyMedium.override(
+                                      fontFamily: 'Outfit',
+                                      letterSpacing: 0.0,
+                                      fontWeight: FontWeight.normal,
+                                    ),
                               ),
                             ],
                           ),
@@ -125,14 +125,12 @@ class PostWidget extends StatelessWidget {
                             opacity: 0.8,
                             child: Text(
                               relativeDate,
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                fontFamily: 'Readex Pro',
-                                fontSize: 12.0,
-                                letterSpacing: 0.0,
-                                fontWeight: FontWeight.w500,
-                              ),
+                              style: TypographyTheme().bodyMedium.override(
+                                    fontFamily: 'Readex Pro',
+                                    fontSize: 12.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.w500,
+                                  ),
                             ),
                           ),
                         ].divide(const SizedBox(width: 10.0)),
@@ -148,16 +146,8 @@ class PostWidget extends StatelessWidget {
               hoverColor: Colors.transparent,
               highlightColor: Colors.transparent,
               onTap: () async {
-                context.pushNamed(
-                  'ViewPost',
-                  extra: <String, dynamic>{
-                    kTransitionInfoKey: const TransitionInfo(
-                      hasTransition: true,
-                      transitionType: PageTransitionType.bottomToTop,
-                      duration: Duration(milliseconds: 100),
-                    ),
-                  },
-                );
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ViewPostWidget()));
               },
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -165,32 +155,32 @@ class PostWidget extends StatelessWidget {
                   Align(
                     alignment: const AlignmentDirectional(-1.0, 0.0),
                     child: Padding(
-                      padding:
-                      const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          0.0, 15.0, 0.0, 0.0),
                       child: Text(
                         content,
                         maxLines: 3,
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Outfit',
-                          fontSize: 16.0,
-                          letterSpacing: 0.0,
-                          fontWeight: FontWeight.normal,
-                        ),
+                        style: TypographyTheme().bodyMedium.override(
+                              fontFamily: 'Outfit',
+                              fontSize: 16.0,
+                              letterSpacing: 0.0,
+                              fontWeight: FontWeight.normal,
+                            ),
                       ),
                     ),
                   ),
                   Align(
                     alignment: const AlignmentDirectional(1.0, 0.0),
                     child: Padding(
-                      padding:
-                      const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 7.0, 5.0),
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          0.0, 5.0, 7.0, 5.0),
                       child: Text(
                         'Read more...',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Readex Pro',
-                          color: FlutterFlowTheme.of(context).orangePeel,
-                          letterSpacing: 0.0,
-                        ),
+                        style: TypographyTheme().bodyMedium.override(
+                              fontFamily: 'Readex Pro',
+                              color: LightModeTheme().orangePeel,
+                              letterSpacing: 0.0,
+                            ),
                       ),
                     ),
                   ),
@@ -210,7 +200,8 @@ class PostWidget extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+              padding:
+                  const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -222,7 +213,7 @@ class PostWidget extends StatelessWidget {
                         isLiked,
                         false,
                       )) {
-                        return FFButtonWidget(
+                        return ButtonWidget(
                           onPressed: () {
                             print('Button pressed ...');
                           },
@@ -234,31 +225,27 @@ class PostWidget extends StatelessWidget {
                             Icons.favorite_sharp,
                             size: 22.0,
                           ),
-                          options: FFButtonOptions(
+                          options: ButtonOptions(
                             height: 40.0,
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                              fontFamily: 'Readex Pro',
-                              color: isLiked
-                                  ? FlutterFlowTheme.of(context).orangePeel
-                                  : FlutterFlowTheme.of(context)
-                                  .primaryText,
-                              fontSize: 15.0,
-                              letterSpacing: 0.0,
-                            ),
+                            color: LightModeTheme().secondaryBackground,
+                            textStyle: TypographyTheme().titleSmall.override(
+                                  fontFamily: 'Readex Pro',
+                                  color: isLiked
+                                      ? LightModeTheme().orangePeel
+                                      : LightModeTheme().primaryText,
+                                  fontSize: 15.0,
+                                  letterSpacing: 0.0,
+                                ),
                             elevation: 0.0,
                             borderRadius: BorderRadius.circular(8.0),
                           ),
                         );
                       } else {
-                        return FFButtonWidget(
+                        return ButtonWidget(
                           onPressed: () {
                             print('Button pressed ...');
                           },
@@ -270,23 +257,19 @@ class PostWidget extends StatelessWidget {
                             Icons.favorite_border,
                             size: 22.0,
                           ),
-                          options: FFButtonOptions(
+                          options: ButtonOptions(
                             height: 40.0,
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                              fontFamily: 'Readex Pro',
-                              color:
-                              FlutterFlowTheme.of(context).primaryText,
-                              fontSize: 15.0,
-                              letterSpacing: 0.0,
-                            ),
+                            color: LightModeTheme().secondaryBackground,
+                            textStyle: TypographyTheme().titleSmall.override(
+                                  fontFamily: 'Readex Pro',
+                                  color: LightModeTheme().primaryText,
+                                  fontSize: 15.0,
+                                  letterSpacing: 0.0,
+                                ),
                             elevation: 0.0,
                             borderRadius: BorderRadius.circular(8.0),
                           ),
@@ -294,7 +277,7 @@ class PostWidget extends StatelessWidget {
                       }
                     },
                   ),
-                  FFButtonWidget(
+                  ButtonWidget(
                     onPressed: () {
                       print('Button pressed ...');
                     },
@@ -306,30 +289,29 @@ class PostWidget extends StatelessWidget {
                       FontAwesomeIcons.comment,
                       size: 22.0,
                     ),
-                    options: FFButtonOptions(
+                    options: ButtonOptions(
                       height: 40.0,
-                      padding:
-                      const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                      iconPadding:
-                      const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          16.0, 0.0, 16.0, 0.0),
+                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          0.0, 0.0, 0.0, 0.0),
                       color: const Color(0x00F1F4F8),
-                      textStyle:
-                      FlutterFlowTheme.of(context).titleSmall.override(
-                        fontFamily: 'Readex Pro',
-                        color: FlutterFlowTheme.of(context).primaryText,
-                        fontSize: 15.0,
-                        letterSpacing: 0.0,
-                      ),
+                      textStyle: TypographyTheme().titleSmall.override(
+                            fontFamily: 'Readex Pro',
+                            color: LightModeTheme().primaryText,
+                            fontSize: 15.0,
+                            letterSpacing: 0.0,
+                          ),
                       elevation: 0.0,
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                   ),
-                  FlutterFlowIconButton(
+                  RambleIconButton(
                     borderRadius: 8.0,
                     buttonSize: 40.0,
                     icon: Icon(
                       Icons.keyboard_control,
-                      color: FlutterFlowTheme.of(context).primaryText,
+                      color: LightModeTheme().primaryText,
                       size: 20.0,
                     ),
                     onPressed: () {

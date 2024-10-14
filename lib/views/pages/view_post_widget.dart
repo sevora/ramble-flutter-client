@@ -1,12 +1,14 @@
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-// import '/flutter_flow/flutter_flow_widgets.dart';
-import '/views/reusable/post_creator_widget.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-// import 'package:google_fonts/google_fonts.dart';
-// import 'package:provider/provider.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+
+import '../../themes/light_mode_theme.dart';
+import '../../themes/typography_theme.dart';
+import '../../utilities/utilities.dart';
+
+import '../pages/posts_widget.dart';
+import '../reusable/ramble_icon_button.dart';
+import '../reusable/post_creator_widget.dart';
+
 
 class ViewPostWidget extends StatelessWidget {
   const ViewPostWidget({super.key});
@@ -17,7 +19,7 @@ class ViewPostWidget extends StatelessWidget {
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         // key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: LightModeTheme().primaryBackground,
         body: SafeArea(
           top: true,
           child: Align(
@@ -26,7 +28,7 @@ class ViewPostWidget extends StatelessWidget {
               width: MediaQuery.sizeOf(context).width * 1.0,
               height: MediaQuery.sizeOf(context).height * 1.0,
               decoration: BoxDecoration(
-                color: FlutterFlowTheme.of(context).secondaryBackground,
+                color: LightModeTheme().secondaryBackground,
                 boxShadow: const [
                   BoxShadow(
                     blurRadius: 4.0,
@@ -50,30 +52,23 @@ class ViewPostWidget extends StatelessWidget {
                       Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
-                          FlutterFlowIconButton(
+                          RambleIconButton(
                             borderRadius: 8.0,
                             icon: Icon(
                               Icons.arrow_back_ios_new_outlined,
-                              color: FlutterFlowTheme.of(context).primaryText,
+                              color: LightModeTheme().primaryText,
                               size: 24.0,
                             ),
                             onPressed: () async {
-                              context.pushNamed(
-                                'Posts',
-                                extra: <String, dynamic>{
-                                  kTransitionInfoKey: const TransitionInfo(
-                                    hasTransition: true,
-                                    transitionType:
-                                    PageTransitionType.leftToRight,
-                                    duration: Duration(milliseconds: 100),
-                                  ),
-                                },
-                              );
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => PostsWidget()));
                             },
                           ),
                           Text(
                             'Post',
-                            style: FlutterFlowTheme.of(context)
+                            style: TypographyTheme()
                                 .titleLarge
                                 .override(
                               fontFamily: 'Outfit',
@@ -112,7 +107,7 @@ class ViewPostWidget extends StatelessWidget {
                                   children: [
                                     Text(
                                       'User A',
-                                      style: FlutterFlowTheme.of(context)
+                                      style: TypographyTheme()
                                           .bodyMedium
                                           .override(
                                         fontFamily: 'Readex Pro',
@@ -125,7 +120,7 @@ class ViewPostWidget extends StatelessWidget {
                                       const AlignmentDirectional(-1.0, 0.0),
                                       child: Text(
                                         '@user_a',
-                                        style: FlutterFlowTheme.of(context)
+                                        style: TypographyTheme()
                                             .bodyMedium
                                             .override(
                                           fontFamily: 'Readex Pro',
@@ -145,7 +140,7 @@ class ViewPostWidget extends StatelessWidget {
                                   alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Text(
                                     'Lorem ipsum odor amet, consectetuer adipiscing elit. Montes quisque sem pulvinar fames; luctus tristique. Varius dictumst fringilla imperdiet primis primis. Ligula vehicula dictum potenti cursus sapien. Laoreet egestas feugiat morbi mauris felis scelerisque netus ex. Tincidunt parturient dictumst lacus felis placerat congue laoreet enim. Primis imperdiet mattis sem platea diam hendrerit eros. Mauris velit tempor inceptos interdum ut condimentum pulvinar? Iaculis libero morbi adipiscing nam consectetur vestibulum posuere.',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: TypographyTheme()
                                         .bodyMedium
                                         .override(
                                       fontFamily: 'Readex Pro',
@@ -155,7 +150,7 @@ class ViewPostWidget extends StatelessWidget {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: LightModeTheme()
                                         .secondaryText,
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
@@ -182,26 +177,26 @@ class ViewPostWidget extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            FlutterFlowIconButton(
+                            RambleIconButton(
                               borderColor: Colors.transparent,
                               borderRadius: 8.0,
                               buttonSize: 40.0,
                               icon: Icon(
                                 Icons.favorite_border,
-                                color: FlutterFlowTheme.of(context).primaryText,
+                                color: LightModeTheme().primaryText,
                                 size: 24.0,
                               ),
                               onPressed: () {
                                 print('IconButton pressed ...');
                               },
                             ),
-                            FlutterFlowIconButton(
+                            RambleIconButton(
                               borderColor: Colors.transparent,
                               borderRadius: 8.0,
                               buttonSize: 40.0,
                               icon: Icon(
                                 Icons.keyboard_control,
-                                color: FlutterFlowTheme.of(context).primaryText,
+                                color: LightModeTheme().primaryText,
                                 size: 24.0,
                               ),
                               onPressed: () {
@@ -213,7 +208,7 @@ class ViewPostWidget extends StatelessWidget {
                       ),
                       Divider(
                         thickness: 2.0,
-                        color: FlutterFlowTheme.of(context).alternate,
+                        color: LightModeTheme().alternate,
                       ),
                       const PostCreatorWidget(
                           prompt: 'Share your thoughts...',
