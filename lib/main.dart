@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ramble_front_end/views/pages/base_widget.dart';
+import 'package:ramble_front_end/views/pages/posts_widget.dart';
 import 'views/pages/login_widget.dart';
 
 void main() {
@@ -8,11 +10,13 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  final bool isLoggedIn = false;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Ramble',
-      home: LogInWidget(),
+      home: isLoggedIn ? const BaseWidget() : const LogInWidget(),
     );
   }
 }

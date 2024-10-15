@@ -4,9 +4,9 @@ import '../../themes/light_mode_theme.dart';
 import '../../themes/typography_theme.dart';
 import '../../utilities/utilities.dart';
 import '../../views/reusable/button.dart';
-import '../../views/pages/posts_widget.dart';
 
 import './login_widget.dart';
+import 'base_widget.dart';
 
 class SignUpWidget extends StatefulWidget {
   const SignUpWidget({super.key});
@@ -28,25 +28,25 @@ class _SignUpWidgetState extends State<SignUpWidget> {
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: Container(
-              constraints: BoxConstraints(
+              constraints: const BoxConstraints(
                 maxWidth: 500.0,
               ),
               decoration: BoxDecoration(
                 color: LightModeTheme().secondaryBackground,
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(0.0),
                   bottomRight: Radius.circular(0.0),
                   topLeft: Radius.circular(0.0),
                   topRight: Radius.circular(0.0),
                 ),
               ),
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: const AlignmentDirectional(0.0, 0.0),
               child: Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Padding(
-                  padding: EdgeInsets.all(14.0),
+                  padding: const EdgeInsets.all(14.0),
                   child: SingleChildScrollView(
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
@@ -54,10 +54,10 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Container(
                             width: 120.0,
-                            decoration: BoxDecoration(),
+                            decoration: const BoxDecoration(),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -90,9 +90,9 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     8.0, 0.0, 8.0, 0.0),
                                 child: TextFormField(
                                   autofocus: true,
@@ -135,7 +135,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                       borderRadius: BorderRadius.circular(24.0),
                                     ),
                                     contentPadding:
-                                        EdgeInsetsDirectional.fromSTEB(
+                                        const EdgeInsetsDirectional.fromSTEB(
                                             24.0, 0.0, 24.0, 0.0),
                                   ),
                                   style: TypographyTheme().bodyMedium.override(
@@ -146,9 +146,9 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     8.0, 0.0, 8.0, 0.0),
                                 child: TextFormField(
                                   autofocus: true,
@@ -191,7 +191,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                       borderRadius: BorderRadius.circular(24.0),
                                     ),
                                     contentPadding:
-                                        EdgeInsetsDirectional.fromSTEB(
+                                        const EdgeInsetsDirectional.fromSTEB(
                                             24.0, 0.0, 24.0, 0.0),
                                   ),
                                   style: TypographyTheme().bodyMedium.override(
@@ -202,9 +202,9 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     8.0, 0.0, 8.0, 0.0),
                                 child: TextFormField(
                                   autofocus: true,
@@ -247,7 +247,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                       borderRadius: BorderRadius.circular(24.0),
                                     ),
                                     contentPadding:
-                                        EdgeInsetsDirectional.fromSTEB(
+                                        const EdgeInsetsDirectional.fromSTEB(
                                             24.0, 0.0, 24.0, 0.0),
                                     suffixIcon: InkWell(
                                       onTap: () => safeSetState(
@@ -271,9 +271,9 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     8.0, 0.0, 8.0, 0.0),
                                 child: TextFormField(
                                   autofocus: true,
@@ -314,7 +314,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                       borderRadius: BorderRadius.circular(24.0),
                                     ),
                                     contentPadding:
-                                        EdgeInsetsDirectional.fromSTEB(
+                                        const EdgeInsetsDirectional.fromSTEB(
                                             24.0, 0.0, 24.0, 0.0),
                                     suffixIcon: InkWell(
                                       onTap: () => safeSetState(
@@ -339,26 +339,29 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     10.0, 0.0, 10.0, 0.0),
                                 child: ButtonWidget(
                                   onPressed: () async {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                PostsWidget()));
+                                    Navigator.pushReplacement(
+                                      context,
+                                      PageRouteBuilder(
+                                        pageBuilder: (context, animation1, animation2) => const BaseWidget(),
+                                        transitionDuration: Duration.zero,
+                                        reverseTransitionDuration: Duration.zero,
+                                      ),
+                                    );
                                   },
                                   text: 'Sign-up',
                                   options: ButtonOptions(
                                     width:
                                         MediaQuery.sizeOf(context).width * 1.0,
                                     height: 40.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 0.0, 30.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: LightModeTheme().orangePeel,
                                     textStyle:
@@ -368,7 +371,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                               letterSpacing: 0.0,
                                             ),
                                     elevation: 3.0,
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Colors.transparent,
                                       width: 1.0,
                                     ),
@@ -377,7 +380,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                 ),
                               ),
                             ),
-                          ].divide(SizedBox(height: 10.0)),
+                          ].divide(const SizedBox(height: 10.0)),
                         ),
                         Column(
                           mainAxisSize: MainAxisSize.max,
@@ -393,7 +396,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                       ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -404,7 +407,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                         width: 60.0,
                                         height: 60.0,
                                         clipBehavior: Clip.antiAlias,
-                                        decoration: BoxDecoration(
+                                        decoration: const BoxDecoration(
                                           shape: BoxShape.circle,
                                         ),
                                         child: Image.asset(
@@ -416,7 +419,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                         width: 50.0,
                                         height: 50.0,
                                         clipBehavior: Clip.antiAlias,
-                                        decoration: BoxDecoration(
+                                        decoration: const BoxDecoration(
                                           shape: BoxShape.circle,
                                         ),
                                         child: Image.asset(
@@ -428,7 +431,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                         width: 60.0,
                                         height: 60.0,
                                         clipBehavior: Clip.antiAlias,
-                                        decoration: BoxDecoration(
+                                        decoration: const BoxDecoration(
                                           shape: BoxShape.circle,
                                         ),
                                         child: Image.asset(
@@ -436,13 +439,13 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                           fit: BoxFit.cover,
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 20.0)),
+                                    ].divide(const SizedBox(width: 20.0)),
                                   ),
                                 ),
-                              ].divide(SizedBox(height: 5.0)),
+                              ].divide(const SizedBox(height: 5.0)),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -469,7 +472,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  LogInWidget()));
+                                                  const LogInWidget()));
                                     },
                                     child: Text(
                                       'Log-in',
@@ -484,12 +487,12 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                           ),
                                     ),
                                   ),
-                                ].divide(SizedBox(width: 5.0)),
+                                ].divide(const SizedBox(width: 5.0)),
                               ),
                             ),
                           ],
                         ),
-                      ].divide(SizedBox(height: 20.0)),
+                      ].divide(const SizedBox(height: 20.0)),
                     ),
                   ),
                 ),
