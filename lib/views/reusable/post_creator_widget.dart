@@ -70,21 +70,11 @@ class PostCreatorWidget extends StatelessWidget {
                             obscureText: false,
                             decoration: InputDecoration(
                               isDense: true,
-                              labelStyle:
-                                  TypographyTheme().labelMedium.override(
-                                        fontFamily: 'Readex Pro',
-                                        letterSpacing: 0.0,
-                                      ),
+                              labelStyle: TypographyTheme().labelMedium,
                               hintText: prompt,
-                              hintStyle: TypographyTheme().labelMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    letterSpacing: 0.0,
-                                  ),
+                              hintStyle: TypographyTheme().labelMedium,
                               enabledBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1.0,
-                                ),
+                                borderSide: const BorderSide(width: 1.0),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                               focusedBorder: OutlineInputBorder(
@@ -112,7 +102,7 @@ class PostCreatorWidget extends StatelessWidget {
                               fillColor: LightModeTheme().secondaryBackground,
                             ),
                             style: TypographyTheme().bodyMedium.override(
-                                  fontFamily: 'Outfit',
+                                  fontFamily: 'Roboto',
                                   letterSpacing: 0.0,
                                 ),
                             cursorColor: LightModeTheme().primaryText),

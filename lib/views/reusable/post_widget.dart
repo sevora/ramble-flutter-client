@@ -100,7 +100,7 @@ class PostWidget extends StatelessWidget {
                               Text(
                                 displayName,
                                 style: TypographyTheme().bodyMedium.override(
-                                      fontFamily: 'Outfit',
+                                      fontFamily: 'Roboto',
                                       fontSize: 15.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.bold,
@@ -112,7 +112,7 @@ class PostWidget extends StatelessWidget {
                                   '@unknown',
                                 ),
                                 style: TypographyTheme().bodyMedium.override(
-                                      fontFamily: 'Outfit',
+                                      fontFamily: 'Roboto',
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.normal,
                                     ),
@@ -124,7 +124,7 @@ class PostWidget extends StatelessWidget {
                             child: Text(
                               relativeDate,
                               style: TypographyTheme().bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
+                                    fontFamily: 'Roboto',
                                     fontSize: 12.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
@@ -159,7 +159,7 @@ class PostWidget extends StatelessWidget {
                         content,
                         maxLines: 3,
                         style: TypographyTheme().bodyMedium.override(
-                              fontFamily: 'Outfit',
+                              fontFamily: 'Roboto',
                               fontSize: 16.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.normal,
@@ -175,7 +175,7 @@ class PostWidget extends StatelessWidget {
                       child: Text(
                         'Read more...',
                         style: TypographyTheme().bodyMedium.override(
-                              fontFamily: 'Readex Pro',
+                              fontFamily: 'Roboto',
                               color: LightModeTheme().orangePeel,
                               letterSpacing: 0.0,
                             ),
@@ -231,7 +231,7 @@ class PostWidget extends StatelessWidget {
                                 0.0, 0.0, 0.0, 0.0),
                             color: LightModeTheme().secondaryBackground,
                             textStyle: TypographyTheme().titleSmall.override(
-                                  fontFamily: 'Readex Pro',
+                                  fontFamily: 'Roboto',
                                   color: isLiked
                                       ? LightModeTheme().orangePeel
                                       : LightModeTheme().primaryText,
@@ -263,7 +263,7 @@ class PostWidget extends StatelessWidget {
                                 0.0, 0.0, 0.0, 0.0),
                             color: LightModeTheme().secondaryBackground,
                             textStyle: TypographyTheme().titleSmall.override(
-                                  fontFamily: 'Readex Pro',
+                                  fontFamily: 'Roboto',
                                   color: LightModeTheme().primaryText,
                                   fontSize: 15.0,
                                   letterSpacing: 0.0,
@@ -295,7 +295,7 @@ class PostWidget extends StatelessWidget {
                           0.0, 0.0, 0.0, 0.0),
                       color: const Color(0x00F1F4F8),
                       textStyle: TypographyTheme().titleSmall.override(
-                            fontFamily: 'Readex Pro',
+                            fontFamily: 'Roboto',
                             color: LightModeTheme().primaryText,
                             fontSize: 15.0,
                             letterSpacing: 0.0,

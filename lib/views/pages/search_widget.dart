@@ -39,14 +39,14 @@ class SearchWidget extends StatelessWidget {
                         isDense: true,
                         labelStyle:
                         TypographyTheme().labelMedium.override(
-                          fontFamily: 'Readex Pro',
+                          fontFamily: 'Roboto',
                           letterSpacing: 0.0,
                         ),
                         hintText:
                         'Search for users, posts, and comments',
                         hintStyle:
                         TypographyTheme().labelMedium.override(
-                          fontFamily: 'Readex Pro',
+                          fontFamily: 'Roboto',
                           letterSpacing: 0.0,
                         ),
                         enabledBorder: OutlineInputBorder(
@@ -81,7 +81,7 @@ class SearchWidget extends StatelessWidget {
                         fillColor: LightModeTheme().secondaryBackground,
                       ),
                       style: TypographyTheme().bodyMedium.override(
-                        fontFamily: 'Readex Pro',
+                        fontFamily: 'Roboto',
                         letterSpacing: 0.0,
                       ),
                       cursorColor: LightModeTheme().primaryText,
@@ -132,7 +132,7 @@ class SearchWidget extends StatelessWidget {
                           'People',
                           textAlign: TextAlign.center,
                           style: TypographyTheme().bodyMedium.override(
-                            fontFamily: 'Readex Pro',
+                            fontFamily: 'Roboto',
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.w500,
                           ),
@@ -174,7 +174,7 @@ class SearchWidget extends StatelessWidget {
                           'Posts',
                           textAlign: TextAlign.center,
                           style: TypographyTheme().bodyMedium.override(
-                            fontFamily: 'Readex Pro',
+                            fontFamily: 'Roboto',
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.w500,
                           ),

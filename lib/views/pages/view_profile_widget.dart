@@ -81,7 +81,7 @@ class ViewProfileWidget extends StatelessWidget {
                                         style: TypographyTheme()
                                             .bodyMedium
                                             .override(
-                                          fontFamily: 'Readex Pro',
+                                          fontFamily: 'Roboto',
                                           color: LightModeTheme()
                                               .primaryText,
                                           fontSize: 20.0,
@@ -96,7 +96,7 @@ class ViewProfileWidget extends StatelessWidget {
                                       style: TypographyTheme()
                                           .bodyMedium
                                           .override(
-                                        fontFamily: 'Readex Pro',
+                                        fontFamily: 'Roboto',
                                         color: const Color(0xFFEE8B60),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w300,
@@ -107,7 +107,7 @@ class ViewProfileWidget extends StatelessWidget {
                                       style: TypographyTheme()
                                           .bodyMedium
                                           .override(
-                                        fontFamily: 'Readex Pro',
+                                        fontFamily: 'Roboto',
                                         letterSpacing: 0.0,
                                       ),
                                     ),
@@ -143,7 +143,7 @@ class ViewProfileWidget extends StatelessWidget {
                                                 .bodyMedium
                                                 .override(
                                               fontFamily:
-                                              'Readex Pro',
+                                              'Roboto',
                                               color: LightModeTheme()
                                                   .secondaryText,
                                               letterSpacing: 0.0,
@@ -179,7 +179,7 @@ class ViewProfileWidget extends StatelessWidget {
                                                 .bodyMedium
                                                 .override(
                                               fontFamily:
-                                              'Readex Pro',
+                                              'Roboto',
                                               color: LightModeTheme()
                                                   .secondaryText,
                                               letterSpacing: 0.0,
@@ -232,7 +232,7 @@ class ViewProfileWidget extends StatelessWidget {
                                               .titleMedium
                                               .override(
                                             fontFamily:
-                                            'Readex Pro',
+                                            'Roboto',
                                             letterSpacing: 0.0,
                                           ),
                                           elevation: 0.0,
@@ -272,7 +272,7 @@ class ViewProfileWidget extends StatelessWidget {
                                                   .bodyMedium
                                                   .override(
                                                 fontFamily:
-                                                'Readex Pro',
+                                                'Roboto',
                                                 fontSize: 10.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight:
@@ -291,7 +291,7 @@ class ViewProfileWidget extends StatelessWidget {
                                                   .bodyMedium
                                                   .override(
                                                 fontFamily:
-                                                'Readex Pro',
+                                                'Roboto',
                                                 color:
                                                 LightModeTheme()
                                                     .primaryText,
@@ -360,7 +360,7 @@ class ViewProfileWidget extends StatelessWidget {
                           'Posts',
                           textAlign: TextAlign.center,
                           style: TypographyTheme().bodyMedium.override(
-                            fontFamily: 'Readex Pro',
+                            fontFamily: 'Roboto',
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.w500,
                           ),
@@ -402,7 +402,7 @@ class ViewProfileWidget extends StatelessWidget {
                           'Likes',
                           textAlign: TextAlign.center,
                           style: TypographyTheme().bodyMedium.override(
-                            fontFamily: 'Readex Pro',
+                            fontFamily: 'Roboto',
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.w500,
                           ),

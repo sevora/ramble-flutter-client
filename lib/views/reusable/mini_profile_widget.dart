@@ -76,7 +76,7 @@ class MiniProfileWidget extends StatelessWidget {
                           displayName,
                           style:
                               TypographyTheme().bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
+                                    fontFamily: 'Roboto',
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -85,7 +85,7 @@ class MiniProfileWidget extends StatelessWidget {
                           userName,
                           style:
                               TypographyTheme().bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
+                                    fontFamily: 'Roboto',
                                     letterSpacing: 0.0,
                                   ),
                         ),
@@ -107,7 +107,7 @@ class MiniProfileWidget extends StatelessWidget {
                         ? LightModeTheme().orangePeel
                         : LightModeTheme().secondaryBackground,
                     textStyle: TypographyTheme().titleSmall.override(
-                          fontFamily: 'Readex Pro',
+                          fontFamily: 'Roboto',
                           color: isFollowing!
                               ? Colors.white
                               : LightModeTheme().orangePeel,
@@ -150,7 +150,7 @@ class MiniProfileWidget extends StatelessWidget {
                         ),
                         maxLines: 3,
                         style: TypographyTheme().bodyMedium.override(
-                              fontFamily: 'Readex Pro',
+                              fontFamily: 'Roboto',
                               letterSpacing: 0.0,
                             ),
                       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../views/pages/login_widget.dart';
 import '../../themes/light_mode_theme.dart';
 import '../../themes/typography_theme.dart';
 import '../../utilities/utilities.dart';
@@ -28,7 +29,7 @@ class SettingsWidget extends StatelessWidget {
                 child: Text(
                   'Options',
                   style: TypographyTheme().bodyMedium.override(
-                    fontFamily: 'Readex Pro',
+                    fontFamily: 'Roboto',
                     fontSize: 25.0,
                     letterSpacing: 0.0,
                   ),
@@ -45,7 +46,14 @@ class SettingsWidget extends StatelessWidget {
               ),
               child: ButtonWidget(
                 onPressed: () async {
-                  // context.goNamed('LogIn');
+                  Navigator.pushReplacement(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (context, animation1, animation2) => const LogInWidget(),
+                      transitionDuration: Duration.zero,
+                      reverseTransitionDuration: Duration.zero,
+                    ),
+                  );
                 },
                 text: 'Log-out',
                 options: ButtonOptions(
@@ -56,7 +64,7 @@ class SettingsWidget extends StatelessWidget {
                   const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   color: LightModeTheme().error,
                   textStyle: TypographyTheme().titleSmall.override(
-                    fontFamily: 'Readex Pro',
+                    fontFamily: 'Roboto',
                     color: Colors.white,
                     letterSpacing: 0.0,
                   ),
