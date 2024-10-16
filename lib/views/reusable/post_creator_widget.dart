@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ramble_front_end/themes/typography_theme.dart';
-
 import '../../themes/light_mode_theme.dart';
 import '../../utilities/utilities.dart';
 import '../../views/reusable/ramble_icon_button.dart';

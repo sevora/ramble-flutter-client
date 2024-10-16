@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-
 import '../../themes/light_mode_theme.dart';
 import '../../themes/typography_theme.dart';
 import '../../utilities/utilities.dart';
@@ -14,9 +13,9 @@ class MiniProfileWidget extends StatelessWidget {
     this.isFollowing,
     this.biography,
     String? profileImageURL,
-  })  : this.displayName = displayName ?? 'Unknown User',
-        this.userName = userName ?? '@unknown',
-        this.profileImageURL = profileImageURL ??
+  })  : displayName = displayName ?? 'Unknown User',
+        userName = userName ?? '@unknown',
+        profileImageURL = profileImageURL ??
             'https://static.vecteezy.com/system/resources/previews/001/840/618/original/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg';
 
   final String displayName;
@@ -31,7 +30,7 @@ class MiniProfileWidget extends StatelessWidget {
       width: MediaQuery.sizeOf(context).width * 1.0,
       decoration: BoxDecoration(
         color: LightModeTheme().secondaryBackground,
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             blurRadius: 4.0,
             color: Color(0x33000000),
@@ -47,7 +46,7 @@ class MiniProfileWidget extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(10.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -59,12 +58,12 @@ class MiniProfileWidget extends StatelessWidget {
                       width: 50.0,
                       height: 50.0,
                       clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                       ),
                       child: CachedNetworkImage(
-                        fadeInDuration: Duration(milliseconds: 500),
-                        fadeOutDuration: Duration(milliseconds: 500),
+                        fadeInDuration: const Duration(milliseconds: 500),
+                        fadeOutDuration: const Duration(milliseconds: 500),
                         imageUrl: profileImageURL,
                         fit: BoxFit.cover,
                       ),
@@ -92,7 +91,7 @@ class MiniProfileWidget extends StatelessWidget {
                         ),
                       ],
                     ),
-                  ].divide(SizedBox(width: 10.0)),
+                  ].divide(const SizedBox(width: 10.0)),
                 ),
                 ButtonWidget(
                   onPressed: () {
@@ -101,9 +100,9 @@ class MiniProfileWidget extends StatelessWidget {
                   text: 'Follow',
                   options: ButtonOptions(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                     iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: isFollowing!
                         ? LightModeTheme().orangePeel
                         : LightModeTheme().secondaryBackground,
@@ -129,12 +128,12 @@ class MiniProfileWidget extends StatelessWidget {
             builder: (context) {
               if (biography != null && biography != '') {
                 return Padding(
-                  padding: EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(16.0),
                   child: Container(
                     width: MediaQuery.sizeOf(context).width * 1.0,
                     decoration: BoxDecoration(
                       color: LightModeTheme().secondaryBackground,
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                         bottomLeft: Radius.circular(0.0),
                         bottomRight: Radius.circular(0.0),
                         topLeft: Radius.circular(0.0),
@@ -143,7 +142,7 @@ class MiniProfileWidget extends StatelessWidget {
                     ),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                       child: Text(
                         valueOrDefault<String>(
                           biography,

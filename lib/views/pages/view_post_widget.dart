@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-
 import '../../themes/light_mode_theme.dart';
 import '../../themes/typography_theme.dart';
 import '../../utilities/utilities.dart';
-
-import '../pages/posts_widget.dart';
 import '../reusable/ramble_icon_button.dart';
 import '../reusable/post_creator_widget.dart';
 

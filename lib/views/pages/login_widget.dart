@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ramble_front_end/views/pages/base_widget.dart';
-
 import '../../themes/light_mode_theme.dart';
 import '../../themes/typography_theme.dart';
 import '../../utilities/utilities.dart';
 import '../../views/reusable/button.dart';
-
 import './sign_up_widget.dart';
 
 class LogInWidget extends StatefulWidget {
@@ -340,11 +338,14 @@ class _LogInWidgetState extends State<LogInWidget> {
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  const SignUpWidget()));
+                                      Navigator.pushReplacement(
+                                        context,
+                                        PageRouteBuilder(
+                                          pageBuilder: (context, animation1, animation2) => const SignUpWidget(),
+                                          transitionDuration: Duration.zero,
+                                          reverseTransitionDuration: Duration.zero,
+                                        ),
+                                      );
                                     },
                                     child: Text(
                                       'Sign-up',

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../themes/light_mode_theme.dart';
 import '../../themes/typography_theme.dart';
 import '../../utilities/utilities.dart';

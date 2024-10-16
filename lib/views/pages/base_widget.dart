@@ -39,47 +39,23 @@ class _BaseWidgetState extends State<BaseWidget> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             label: 'Posts',
-            icon: Icon(
-              Icons.home_outlined,
-              size: 16.0,
-            ),
-            activeIcon: Icon(
-              Icons.home,
-              size: 16.0,
-            ),
+            icon: Icon(Icons.home_outlined),
+            activeIcon: Icon(Icons.home),
           ),
           BottomNavigationBarItem(
             label: 'Search',
-            icon: Icon(
-              Icons.search_rounded,
-              size: 16.0,
-            ),
-            activeIcon: Icon(
-              Icons.search_outlined,
-              size: 16.0,
-            ),
+            icon: Icon(Icons.search_rounded),
+            activeIcon: Icon(Icons.search_outlined),
           ),
           BottomNavigationBarItem(
-            label: 'ViewProfile',
-            icon: Icon(
-              Icons.person_outlined,
-              size: 16.0,
-            ),
-            activeIcon: Icon(
-              Icons.person,
-              size: 16.0,
-            ),
+            label: 'View Profile',
+            icon: Icon(Icons.person_outlined),
+            activeIcon: Icon(Icons.person),
           ),
           BottomNavigationBarItem(
             label: 'Settings',
-            icon: Icon(
-              Icons.settings_outlined,
-              size: 16.0,
-            ),
-            activeIcon: Icon(
-              Icons.settings_sharp,
-              size: 16.0,
-            ),
+            icon: Icon(Icons.settings_outlined),
+            activeIcon: Icon(Icons.settings_sharp),
           )
         ],
       ),

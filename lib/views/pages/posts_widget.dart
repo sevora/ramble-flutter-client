@@ -5,7 +5,6 @@ import '../../utilities/utilities.dart';
 
 import '../reusable/post_widget.dart';
 import '../reusable/post_creator_widget.dart';
-import '../reusable/ramble_bottom_navigation_bar.dart';
 
 class PostsWidget extends StatelessWidget {
   const PostsWidget({super.key});

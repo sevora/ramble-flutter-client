@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import '../../themes/light_mode_theme.dart';
 import '../../themes/typography_theme.dart';
 import '../../utilities/utilities.dart';
 import '../../views/reusable/button.dart';
 import '../../views/reusable/ramble_icon_button.dart';
-
 import '../pages/view_post_widget.dart';
 
 class PostWidget extends StatelessWidget {
@@ -147,7 +145,7 @@ class PostWidget extends StatelessWidget {
               highlightColor: Colors.transparent,
               onTap: () async {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ViewPostWidget()));
+                    MaterialPageRoute(builder: (context) => const ViewPostWidget()));
               },
               child: Column(
                 mainAxisSize: MainAxisSize.max,
