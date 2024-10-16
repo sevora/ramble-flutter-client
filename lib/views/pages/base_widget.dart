@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ramble_front_end/views/pages/posts_widget.dart';
-import 'package:ramble_front_end/views/pages/search_widget.dart';
-import 'package:ramble_front_end/views/pages/settings_widget.dart';
-import 'package:ramble_front_end/views/pages/view_profile_widget.dart';
+import '../../views/pages/posts_widget.dart';
+import '../../views/pages/search_widget.dart';
+import '../../views/pages/settings_widget.dart';
+import '../../views/pages/view_profile_widget.dart';
 import '../../themes/light_mode_theme.dart';
 
 class BaseWidget extends StatefulWidget {

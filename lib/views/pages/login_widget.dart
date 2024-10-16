@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ramble_front_end/views/pages/base_widget.dart';
+import '../../views/pages/base_widget.dart';
 import '../../themes/light_mode_theme.dart';
 import '../../themes/typography_theme.dart';
 import '../../utilities/utilities.dart';
